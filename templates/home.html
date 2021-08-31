@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <h1>Flight Price Prediction</h1>
+    <form class="form-style-7" action="\predict" method="POST">
+        <ul>
+        <li>
+            <label for="name">Date of Departure</label>
+            <input type="date" name="Dep_Time" maxlength="100">
+            <span>Enter your Date of Departure</span>
+        </li>
+        <li>
+            <label for="name">Date of Arrival</label>
+            <input type="date" name="Arrival_Time" maxlength="100">
+            <span>Enter your Date of Arrival</span>
+        </li>
+        <li>
+            <label for="email">Source</label>
+            <select name="Source" id="Source" class="c-form__input" placeholder=" " required>
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+            </select>
+        </li>
+        <li>
+            <label for="email">Destination</label>
+            <select name="Destination" id="Destination" class="c-form__input" placeholder=" " required="required">
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="Cochin">Cochin</option>
+                <option value="Delhi">Delhi</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+            </select>
+        </li>
+        <li>
+            <label for="email">Stopage</label>
+            <select name="stops" id="femail" class="c-form__input" placeholder=" " required="required">
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="0">Non-Stop</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+            </select>
+        </li>
+        <li>
+            <label for="email">Which airline do you want to travel</label>
+            <select name="airline" id="airline" class="c-form__input" placeholder=" " required="required">
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="Jet Airways">Jet Airways</option>
+                    <option value="IndiGo">IndiGo</option>
+                    <option value="Air India">Air India</option>
+                    <option value="Multiple carriers">Multiple carriers</option>
+                    <option value="SpiceJet">SpiceJet</option>
+                    <option value="Vistara">Vistara</option>
+                    <option value="Air Asia">Air Asia</option>
+                    <option value="GoAir">GoAir</option>
+                    <option value="Multiple carriers Premium economy">Multiple carriers Premium economy
+                    </option>
+                    <option value="Jet Airways Business">Jet Airways Business</option>
+                    <option value="Vistara Premium economy">Vistara Premium economy</option>
+                    <option value="Trujet">Trujet</option>
+            </select>
+        </li>
+        <li>
+            <input type="submit" value="Send This" >
+        </li>
+        </ul>
+        </form>
+        <h3>{{ prediction_text }}</h3>
+        <h4>©2021 Bhavan Bhatt</h4>
+        <script src="script.js"></script>
+</body>
+</html>
